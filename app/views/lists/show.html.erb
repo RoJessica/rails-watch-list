@@ -11,6 +11,14 @@
       %>
     </li>
   <% end %>
+
+<h1>New bookmark</h1>
+
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.input :comment %>
+  <%= f.association :movie %>
+  <%= f.button :submit %>
+<% end %>
 </ul>
 
 
